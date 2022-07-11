@@ -1,0 +1,43 @@
+/* ------GENERALE------ */
+body{
+    padding: 0px 1rem;
+    font-family: 'Mulish', sans-serif;
+}
+
+.orange-txt{
+    color: orangered;
+}
+
+/* ------HEADER------ */
+
+
+/* ------SECT-INFO------ */
+
+
+/* ------SECT-BLOG------ */
+
+
+/* ------SECT-MENU------ */
+
+
+/* ------SECT-SUBSCRIBE------ */
+
+
+/* ------CONTACT-US------ */
+
+
+/* ------SECT-INFO------ */
+
+
+
+
+/* -----MEDIA QUERIES----- */
+@media screen and (min-width: 768px) {
+    
+}
+@media screen and (min-width: 992px) {
+
+}
+@media screen and (min-width: 1200px) {
+
+}
