@@ -1,4 +1,8 @@
 /* ------GENERALE------ */
+:root{
+    --swiper-theme-color:#FF540B;
+}
+
 body{
     font-family: 'Mulish', sans-serif;
 }
@@ -6,6 +10,7 @@ body{
 .orange-txt{
     color: #FF540B;
 }
+
 .txt-small {
     font-size: 24px;
     font-weight: 800;
@@ -14,8 +19,219 @@ body{
     font-weight: 800;
     font-size: 1.9rem;
 }
+
+
+
+h3{
+    font-size: 1rem;
+    font-weight: 800;
+}
+
 /* ------HEADER------ */
 
+
+#head-container{
+    position: relative;
+}
+
+#head-img{
+    width: 100%;
+    height: auto;
+}
+
+#head-container::before{
+    background-image: url(../assets/images/overlay-pattern2.png);
+    background-repeat: repeat;
+    opacity: 0.5;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    content: "";
+}
+
+/* ///////////////NAV BAR TEST AREA////////////////// */
+
+#nav-area{
+    /* max-width: 1080px; da giocarci con i mediaqueries */
+    background-color: rgba(255, 255, 255, 0.89);
+    height: 5rem;
+    width: 95%;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0;
+    left: 2.5%;
+    right: 2.5%;
+    z-index: 100;
+}
+
+#nav-area.sticked{
+    position: fixed;
+    top: 0px;
+}
+
+
+#nav-area ul{
+    list-style-type: none;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.89);
+}
+
+#nav-area ul a{
+    font-size: 0.94rem;
+    font-weight: 500;
+    color: #2E2E2E;
+    text-decoration: none;
+    display: block;
+    padding: 10px 0;
+    margin: 0 15px;
+}
+
+#nav-area ul a:focus{
+    border-bottom: 2px solid #FF540B;
+}
+
+
+#nav-area #logo{
+    float: left;
+    padding: 25px 20px;
+}
+
+#nav-area .menu{
+    clear: both; /*evito che il float mi sposti il menu*/
+    max-height: 0;
+    transition: max-height .6s ease-out;
+    
+}
+
+#nav-area .menu-icon{
+    
+    padding: 38px 20px;
+    position: relative;
+    float: right;
+    cursor: pointer;
+}
+
+#nav-area .menu-icon .nav-icon{
+    background-color: #FF540B;
+    display: block;
+    width: 25px;
+    height: 3px;
+    position: relative;
+    transition: background-color .2s ease-in;
+}
+
+#nav-area .menu-icon .nav-icon:before,
+#nav-area .menu-icon .nav-icon:after{
+    background-color: #FF540B;
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    transition: all .2s ease-out;
+    position: absolute;
+    
+}
+#nav-area .menu-icon .nav-icon:before{
+    top: 8px;
+}
+#nav-area .menu-icon .nav-icon:after{
+    top: -8px;
+}
+
+#nav-area .menu-btn{
+    display: none;
+}
+
+#nav-area .menu-btn:checked ~ .menu{
+    padding: 10px 0;
+    max-height: 240px;
+}
+
+#nav-area .menu-btn:checked ~ .menu-icon .nav-icon{
+    background-color: transparent;
+}
+#nav-area .menu-btn:checked ~ .menu-icon .nav-icon::before{
+    transform: rotate(-45deg);
+    top: 0;
+}
+#nav-area .menu-btn:checked ~ .menu-icon .nav-icon:after{
+    transform: rotate(45deg);
+    top: 0;
+}
+
+/* ///////////////FINE NAV BAR TEST AREA////////////////// */
+#head-content{
+    /* max-width: 1080px; da giocarci con i mediaqueries */
+    width: 95%;
+    margin: 0 auto;
+}
+
+#featured-h3{
+    padding-top: 2rem;
+}
+
+/* ///////////////SLIDER TEST AREA////////////////// */
+.carusel{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+}
+.carusel > .slide-container{
+    width: 100%;
+    padding: 2rem 0;
+    margin-left: 0;
+    margin-right: 0;
+    
+}
+.slide-content{
+    overflow: hidden;   
+}
+
+.card img{
+    max-width: 100%;
+    border-radius: 25px; /*non necessario ivedere in corso dopera*/
+}
+
+.slide-content{
+    margin: 0 40px; /*margine da sinistra*/
+}
+
+/* styling arrows */
+.slide-container > .swiper-navBtn{
+    color:orangered;
+    transition: color 0.2s ease-in-out;
+}
+.slide-container > .swiper-navBtn:hover{
+    color:rgb(163, 43, 0);
+}
+/* size delle arrow */
+.slide-container > .swiper-navBtn::before,
+.slide-container > .swiper-navBtn::after{
+    font-size: 2rem;
+}
+
+/* riecordarsi che le arrow hanno zindex 10 di default */
+/* possibile conflitto con menu a tendina */
+.slide-container >.swiper-button-next{
+    right: 0px;
+}
+.slide-container >.swiper-button-prev{
+    left: 0px;
+}
+
+/* why bullet color nowork? */
+/* ??? roba modificata dalk root ok ma come cazzo li metto al centro ??? */
+.slide-container > .swiper-pagination-bullet{
+    position: absolute;
+    /* background-color: orangered; */
+    opacity: 1;
+}
+.slide-container > .swiper-pagination-bullet:active{
+    background-color: rgb(163, 43, 0);
+    opacity: 1;
+}
+/* ///////////////FINE SLIDER TEST AREA////////////////// */
 
 /* ------SECT-INFO------ */
 /* ------ID CAMBIATO------ */
@@ -64,6 +280,52 @@ body{
 
 /* ------SECT-BLOG------ */
 
+.grey-line{
+    height: 1px;
+    width: 90px;
+    background-color: grey;
+    margin: 2rem 0;
+}
+#sect-blog{
+    padding-top: 75px;
+    padding-bottom: 100px;
+    background: url(../assets/images/blog/blog-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    /* position: relative; */
+    overflow: hidden;
+}
+#sect-blog{
+/* animazione immagine */
+}
+
+#sect-blog h2{
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 2rem;
+}
+
+.blog-piatto{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+#sect-blog .blog-img{
+    height: 100%;
+}
+
+.blog-txt{
+    padding: 1rem;
+    height: 188px; /*non mi piace ma img non si allarga*/
+    width: 300px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
 
 /* ------SECT-MENU------ */
 
@@ -159,7 +421,19 @@ body{
 
 
 /* -----MEDIA QUERIES----- */
+@media screen and (max-width: 992px) {
+
+    .slide-content{
+        margin: 0 10px; /*diminuisco margin perche tolgo frecce*/
+    }
+
+    .slide-container > .swiper-navBtn{
+        display: none;
+    }
+    
+}
 @media screen and (min-width: 768px) {
+
     /* ------SECT-SUBSCRIBE------ */
     #sect-subscribe {
         height: 54%;
@@ -197,6 +471,35 @@ body{
     #sect-cuoco p {
         width: 880px;
     }
+
+    #nav-area, #head-content{
+        max-width: 800px;
+    }
+    
+
+   
+    #nav-area .menu {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        clear: none;
+        height: 100%;
+        max-height: 100%;
+        background-color: rgba(255, 255, 255, 0);
+    }
+    #nav-area .menu-icon {
+        display: none;
+    }
+    /* #nav-area li {
+        float: left;
+    } */
+
+    #nav-area li a {
+        padding: 1rem 0;
+        width: auto;
+    }
+
+
 }
 @media screen and (min-width: 1200px) {
 
