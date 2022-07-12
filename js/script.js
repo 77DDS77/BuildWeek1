@@ -34,9 +34,9 @@ var swiper = new Swiper(".slide-content", {
 function plsStick(elemento){
     let getSticky = document.querySelector(elemento);
 
-    if(document.body.scrollTop > 350 && !getSticky.classList.contains('sticked')){
+    if(document.body.scrollTop > 170 && !getSticky.classList.contains('sticked')){
         getSticky.classList.add('sticked');
-    }else if(document.body.scrollTop < 349){
+    }else if(document.body.scrollTop < 169){
         getSticky.classList.remove('sticked');
     }
     console.log(getSticky)
