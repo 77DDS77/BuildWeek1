@@ -4,9 +4,7 @@
 }
 
 body{
-    font-family: 'Mulish', sans-serif;
-
-    
+    font-family: 'Mulish', sans-serif; 
 }
 
 .orange-txt{
@@ -23,10 +21,10 @@ body{
 }
 
 
-
-h3{
-    font-size: 1rem;
-    font-weight: 800;
+/* !!!!!!!!!!!cambiato leggermente h3!!!!!!!!!!! */
+h3 {
+    font-size: 20px;
+    font-weight: 700;
 }
 
 /* ------HEADER------ */
@@ -165,7 +163,7 @@ h3{
 #head-content{
     /* max-width: 1080px; da giocarci con i mediaqueries */
     width: 95%;
-    margin: 0 auto;
+    padding: 0 1rem;
 }
 
 #featured-h3{
@@ -237,10 +235,12 @@ h3{
 
 /* ------SECT-INFO------ */
 /* ------ID CAMBIATO------ */
+
+/* cambiato padding */
 #sect-cuoco {
     background-color: #f6f6f6;
     text-align: center;
-    padding: 70px 15px;
+    padding: 4rem 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -297,10 +297,12 @@ h3{
     background-attachment: fixed;
     /* position: relative; */
     overflow: hidden;
+    padding: 1rem;
 }
-#sect-blog{
-/* animazione immagine */
-}
+
+/* #sect-blog{
+ animazione immagine
+} */
 
 #sect-blog h2{
     text-align: center;
@@ -308,33 +310,65 @@ h3{
     padding: 2rem;
 }
 
-.blog-piatto{
+
+/* !!!!!!!!!!!!AGGIUNTO DIV BLOG PLATES!!!!!!!!!!!!! */
+#blog-plates{
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    margin-bottom: 1rem;
+    align-items: center;
+}
+/* data attribute per roversare i piatti che mi servono */
+#blog-plates [data-reverse]{
+    flex-direction: column-reverse;
 }
 
-#sect-blog .blog-img{
-    height: 100%;
+.blog-piatto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 1rem;
+
+}
+
+.blog-img img{
+   width: 100%;
+   max-width: 440px;
 }
 
 .blog-txt{
-    padding: 1rem;
-    height: 188px; /*non mi piace ma img non si allarga*/
-    width: 300px;
+    box-sizing: border-box;
+    max-width: 440px;
+    padding: 2rem;
+    text-align: center;
     background-color: white;
     display: flex;
     flex-direction: column;
     justify-content:center;
     align-items: center;
 }
+.blog-txt p{
+    color: #959595;
+    font-size: 0.8rem;
+}
+
+/*?????????? pulsante di merda non sta dove voglio io ???????????*/
+#sect-blog #blog-btn{
+    padding: 28px 85px;
+    background-color: #ff530a;
+    color: #fff;
+    float: left;
+    text-decoration: none;
+    font-weight: 500;
+    
+}
 
 /* ------SECT-MENU------ */
+/* cambiato padding */
 #sect-menu {
     background-color: white;
     position: relative;
-    padding-bottom: 8rem;
-    padding-top: 5rem;
+    padding: 4rem 1rem;
 }
 .title-menu {
     text-align: center;
@@ -469,10 +503,10 @@ h3{
 /* ------CONTACT-US------ */
 /* CONTACT US (Fabi)*/
 
+/* tolto margin sistemato padding */
 #contact-us{
-    
-    margin: 1rem, 0px;
-    padding-top: 3rem;
+    box-sizing: border-box;
+    padding: 3rem 1rem;
     padding-bottom: 2rem;
     
 }
@@ -496,12 +530,13 @@ h3{
     margin-left: -70px;
     top: 4rem;
 }
-
+/* aggiunto margin 0 auto perche' c'e qualcosa che interferisce */
 #contact-form{
     width:100%;
     max-width: 760px;
     display: flex;
     flex-direction: column;
+    margin: 0 auto;
 }
 
 #contact-form h4{
@@ -518,7 +553,7 @@ h3{
     color: #555;
     border-color:#ccc;
     border-width: 0.5px;
-    padding-left: 1rem;
+    /* padding-left: 1rem; */
 }
 
 #contact-form textarea{
@@ -529,7 +564,7 @@ h3{
     color: #555;
     border-color: #ccc;
     border-width: 0.5px;
-    padding-left: 1rem;
+    /* padding-left: 1rem; */
     padding-top: 0.5rem;
     
 }
@@ -569,12 +604,15 @@ h3{
 
 /*SECT INFO- footer (Fabi)*/
 
+/* aggiunto del tutto #info-container */
+#info-container{
+    margin: 4rem 1rem;
+}
+
 #info-container h3, #blog-post-container h3{
     margin-top: 1.5rem;
     margin-bottom: 3rem;
     font-size: 20px;
-   
-
 }
 
 .mini-div-info{
