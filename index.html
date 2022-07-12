@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- links to css files -->
     <link rel="stylesheet" href="./css/reset.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <!-- / -->
     <link rel="stylesheet" href="./css/stile.css">
     <!-- link to fontawesome -->
     <script src="https://kit.fontawesome.com/fe849dba6f.js" crossorigin="anonymous"></script>
@@ -16,11 +19,72 @@
 
     <title>Build Week 1</title>
 </head>
-<body>
+<body onscroll="plsStick('#nav-area')">
         <header>
-
             <!-- ci pensa davide -->
-
+            <div id="head-container">
+                <img id="head-img" src="../assets/images/header.jpg" alt="#">
+                <div id="nav-area">
+                    <img src="./assets/images/logo.png" id="logo" alt="Restaurant's Logo">
+                    <input class="menu-btn" id="menu-btn" type="checkbox">
+                    <label for="menu-btn" class="menu-icon">
+                        <span class="nav-icon"></span>
+                    </label>
+                    <ul class="menu">
+                        <li><a href="#">HOME</a></li>
+                        <li><a href="#">ABOUT US</a></li>
+                        <li><a href="#">BLOG</a></li>
+                        <li><a href="#">MENU</a></li>
+                        <li><a href="#">NEWS</a></li>
+                        <li><a href="#">CONTATTI</a></li>
+                    </ul>
+        
+                </div>
+            </div>
+        
+            <div id="head-content">
+                <h3 id="featured-h3">FEATURED <span class="orange-txt">WORKS</span></h3>
+        
+                <!-- slider foto pazzesco (da ridimensionare) -->
+                <div class="carusel">
+                    <!--body del video-->
+                    <div class="slide-container swiper">
+                        <div class="slide-content">
+                            <div class="card-wrapper swiper-wrapper">
+        
+                                <div class="card swiper-slide">
+                                    <img src="./assets/images/slider/slider-img-1.jpg" alt="#">
+                                </div>
+        
+                                <div class="card swiper-slide">
+                                    <img src="./assets/images/slider/slider-img-2.jpg" alt="#">
+                                </div>
+        
+                                <div class="card swiper-slide">
+                                    <img src="./assets/images/slider/slider-img-3.jpg" alt="#">
+                                </div>
+        
+                                <div class="card swiper-slide">
+                                    <img src="./assets/images/slider/slider-img-4.jpg" alt="#">
+                                </div>
+        
+                                <div class="card swiper-slide">
+                                    <img src="./assets/images/slider/slider-img-1.jpg" alt="#">
+                                </div>
+        
+                                <div class="card swiper-slide">
+                                    <img src="./assets/images/slider/slider-img-2.jpg" alt="#">
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="swiper-button-next swiper-navBtn"></div>
+                        <div class="swiper-button-prev swiper-navBtn"></div>
+                        <div class="swiper-pagination"></div>
+        
+                    </div>
+                </div>
+            </div>
         </header>
 
         <!-- foto con tizio cuoco -->
@@ -43,10 +107,11 @@
             <!-- blocco piatto +  testo 1-->
             <div class="blog-piatto">
                 <div class="blog-img">
-                    <img src="#" alt="#">
+                    <img src="./assets/images/blog/blog-img-1.jpg" alt="#">
                 </div>
                 <div class="blog-txt">
                     <h3>Homestyle Chicken pot Pie</h3>
+                    <div class="grey-line"></div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea dolore animi praesentium maxime repudiandae consequatur.</p>
                 </div>
             </div>
@@ -54,10 +119,11 @@
             <!-- blocco piatto +  testo 2-->
             <div class="blog-piatto">
                 <div class="blog-img">
-                    <img src="#" alt="#">
+                    <img src="./assets/images/blog/blog-img-2.jpg" alt="#">
                 </div>
                 <div class="blog-txt">
                     <h3>Homestyle Chicken pot Pie</h3>
+                    <div class="grey-line"></div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea dolore animi praesentium maxime repudiandae consequatur.</p>
                 </div>
             </div>
@@ -65,10 +131,11 @@
             <!-- blocco piatto +  testo 3-->
             <div class="blog-piatto">
                 <div class="blog-img">
-                    <img src="#" alt="#">
+                    <img src="./assets/images/blog/blog-img-3.jpg" alt="#">
                 </div>
                 <div class="blog-txt">
                     <h3>Homestyle Chicken pot Pie</h3>
+                    <div class="grey-line"></div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea dolore animi praesentium maxime repudiandae consequatur.</p>
                 </div>
             </div>
@@ -76,10 +143,11 @@
             <!-- blocco piatto +  testo 4-->
             <div class="blog-piatto">
                 <div class="blog-img">
-                    <img src="#" alt="#">
+                    <img src="./assets/images/blog/blog-img-4.jpg" alt="#">
                 </div>
                 <div class="blog-txt">
                     <h3>Homestyle Chicken pot Pie</h3>
+                    <div class="grey-line"></div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea dolore animi praesentium maxime repudiandae consequatur.</p>
                 </div>
             </div>
@@ -87,10 +155,11 @@
             <!-- blocco piatto +  testo 5-->
             <div class="blog-piatto">
                 <div class="blog-img">
-                    <img src="#" alt="#">
+                    <img src="./assets/images/blog/blog-img-5.jpg" alt="#">
                 </div>
                 <div class="blog-txt">
                     <h3>Homestyle Chicken pot Pie</h3>
+                    <div class="grey-line"></div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea dolore animi praesentium maxime repudiandae consequatur.</p>
                 </div>
             </div>
@@ -98,10 +167,11 @@
             <!-- blocco piatto +  testo 6-->
             <div class="blog-piatto">
                 <div class="blog-img">
-                    <img src="#" alt="#">
+                    <img src="./assets/images/blog/blog-img-6.jpg" alt="#">
                 </div>
                 <div class="blog-txt">
                     <h3>Homestyle Chicken pot Pie</h3>
+                    <div class="grey-line"></div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea dolore animi praesentium maxime repudiandae consequatur.</p>
                 </div>
             </div>
@@ -281,7 +351,9 @@
 
 
 
-
+    <!-- Swiper JS -->   
+    <script src="./js/swiper-bundle.min.js"></script>
+    <!-- my script -->
     <script src="./js/script.js"></script>
 
 </body>
