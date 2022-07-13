@@ -284,12 +284,7 @@ h3 {
 
 /* ------SECT-BLOG------ */
 
-.grey-line{
-    height: 1px;
-    width: 90px;
-    background-color: grey;
-    margin: 2rem 0;
-}
+
 #sect-blog{
     padding-top: 75px;
     padding-bottom: 100px;
@@ -429,8 +424,8 @@ h3 {
 }
 .grey-line{
     height: 1px;
-    width: 90px;
-    background-color: grey;
+    width: 140px;
+    background-color: #C8C1B3;
     margin: 2rem auto;
     
 }
@@ -480,6 +475,7 @@ h3 {
     padding-top: 2rem;
     color: #FF540B;
 }
+
 
 
 /* ------SECT-SUBSCRIBE------ */
@@ -580,16 +576,17 @@ h3 {
     text-align: center;
     margin-top: 2rem ;
     margin-bottom: 2rem ;
-    font-size: 1.5rem;
-    font-weight: 800;
+    font-size: 1.4rem;
+    font-weight: 600;
     position: relative;
+    color: #2E2E2E;
 }
 
 #contact-us h3::after{
     content: "";
     position: absolute;
-    height: 1.7px;
-    width: 150px;
+    height: 1px;
+    width: 140px;
     background-color: #C8C1B3;
     left: 50%;
     margin-left: -70px;
@@ -609,27 +606,23 @@ h3 {
     font-size: 1rem;
     font-weight: 800;
 }
-
-#contact-form input{
-    height: 2.7rem;
+#contact-form input, #contact-form textarea {
     margin: 0.5rem 0;
-    font-size: 14px;
-    font-family: inherit;
-    color: #555;
+    font-size: 12px;
     border-color:#ccc;
-    border-width: 0.5px;
+    color: #555;
     /* padding-left: 1rem; */
+    transition: 0.3s all;
+    border: 1px solid #ccc;
+    box-shadow: none;
+    padding: 6px 12px;
+}
+#contact-form input{
+    height: 47px;
 }
 
 #contact-form textarea{
     height: 7rem;
-    margin: 0.5rem 0;
-    font-size: 14px;
-    font-family: inherit;
-    color: #555;
-    border-color: #ccc;
-    border-width: 0.5px;
-    /* padding-left: 1rem; */
     padding-top: 0.5rem;
     
 }
@@ -639,17 +632,6 @@ h3 {
     border: 1px solid #7EC3BB;
 
 }
-#contact-form input, #contact-form textarea {
-    
-    border: 1px solid #ccc;
-    box-shadow: none;
-
-}
-
-
-
-
-
 
 #contact-btn{
     width: 100%;
@@ -702,8 +684,6 @@ margin-bottom: 1rem;
 #blog-post-container h3:nth-child(3){
     margin-bottom: 0.7rem;
 }
-
-
 
 
 .blog-post-d{
@@ -763,12 +743,7 @@ margin-bottom: 1rem;
     
     text-align: center;
    
-    
-    
 }
-
-
-
 
 /* -----MEDIA QUERIES----- */
 @media screen and (max-width: 992px) {
@@ -812,6 +787,15 @@ margin-bottom: 1rem;
         font-size: 2rem;
         font-weight: 500;
     }
+    #container-menu {
+        padding: 0;
+    }
+    #container-menu {
+        padding: 0;
+    }
+    #sect-menu {
+        padding: 0;
+    }
 
     /* -----SECT BLOG----- */
 
@@ -850,6 +834,10 @@ margin-bottom: 1rem;
     }
     .txt-big {
         font-size: 2.4rem;
+    }
+    /* ------CONTACT-US------ */
+    #contact-us h3 {
+        font-size: 1.85rem;
     }
 
 
