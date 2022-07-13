@@ -364,7 +364,7 @@ h3 {
 
 /*?????????? pulsante di merda non sta dove voglio io ???????????*/
 #sect-blog .button-container{
-    width: 100vw;
+    
     height: 80px;
     position: relative;
     margin-bottom: 2rem;
@@ -654,7 +654,7 @@ h3 {
     margin: 4rem 1rem;
 }
 
-#info-container h3, #blog-post-container h3{
+#info-container h3, #blog-post-container1 h3, #blog-post-container2 h3{
     margin-top: 1.5rem;
     margin-bottom: 3rem;
     font-size: 20px;
@@ -664,31 +664,35 @@ h3 {
 margin-bottom: 1rem;
 }
 
-#info-container h3,  #blog-post-container h3, #blog-post-container a{
+#info-container h3,  #blog-post-container1 h3{
     margin-bottom: 2rem;
     font-weight: 600;
 }
 
-#info-container, #blog-post-container{
+#blog-post-container2 h3{
+    margin-bottom: 1rem;
+}
+
+#info-container, #blog-post-container1, #blog-post-container2 {
     margin-bottom: 4.5rem;
     line-height: 2rem;
     
 }
 
-#info-container p, #blog-post-container p{
-    font-size: 0.8rem;
+#info-container p, #blog-post-container1 p, #blog-post-container2 p{
+    font-size: 0.9rem;
 }
 
-#blog-post-container h3:nth-child(3){
-    margin-bottom: 0.7rem;
-}
+
+
 
 
 .blog-post-d{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 1rem;
+    padding-bottom: 1rem;
    
 }
 
@@ -696,22 +700,25 @@ margin-bottom: 1rem;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 1.5rem;
+    gap: 1.4rem;
 
     font-size: 1rem;
     
 }
 
 #fa-img-social a{
-    width: 0.75rem ;
-    height: 0.75rem;
+    width: 2.5rem ;
+    height: 1.6rem;
     text-align: center;
     border-radius: 50%;
     color: white;
     background-color: #b7b7b7;
-    padding: 1rem;
+    padding-top: 0.9rem;
+    
     
 }
+
+
 
 #fa-img-social a:hover{
     background-color: #FF4F02;
@@ -725,9 +732,7 @@ margin-bottom: 1rem;
     text-decoration: none;
 }
 
-.fa-solid{
-    margin-right: 30px;
-}
+
 #final-foot {
     background-color: #E9E9E9;
     line-height: 1rem;
@@ -851,7 +856,7 @@ margin-bottom: 1rem;
     }
 
 
-    /*-------SECT Contact US ----- */
+    /*-------SECT Contact US 768px ----- */
 
    #contact-us{
     text-align: center;
@@ -864,9 +869,20 @@ margin-bottom: 1rem;
     #contact-us button{
         max-width:512px;
         margin: 0 auto;
-       
-
     }
+
+    /* ----SECT  Contact info 768px----*/
+
+    #triple-div-info{
+        display:flex;
+        justify-content: space-around;
+    }
+
+    #blog-post-container1{
+        margin-bottom: 0;
+    }
+
+
 
 
 
@@ -897,7 +913,7 @@ margin-bottom: 1rem;
         padding: 1rem 0;
         width: auto;
     }
-}
+
     
 
     /* BLOG SECTION */
@@ -907,11 +923,58 @@ margin-bottom: 1rem;
     #blog-plates{
         flex-direction: row;
         flex-wrap: wrap;
-        transform: scale(1.1);
+        
     }
     #sect-blog #blog-btn{
         left: 75%;
     }
+
+      /*-------SECT Contact US 992px ----- */
+
+   #contact-us{
+    width: 940px;
+    text-align: center;
+    margin: 0 auto;
+    
+   }
+    
+    #contact-form{
+        max-width: 940px;
+    }
+
+    #contact-us button{
+        max-width:512px;
+        float: right;
+
+    }
+
+    /*---------SECT Contact Info 992px --------*/
+
+    #triple-div-info{
+        display:flex;
+        flex-direction: column;
+        
+    }
+
+    #info-container{
+        max-width: 974.4px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-basis: auto;
+        padding: 4rem 0;
+    }
+
+    .info-cont{
+        width: 33%;
+        padding: 0 1rem;
+    }
+
+    #blog-post-container2{
+        margin-bottom: 0;
+    }
+
+}
 
 
 @media screen and (min-width: 1200px) {
@@ -925,5 +988,18 @@ margin-bottom: 1rem;
     #container-menu .title-menu p {
         max-width: 874px;
     }
+
+
+#contact-us{
+    width: 1170px;
+    text-align: center;
+    margin: 0 auto;
+    
+   }
+    
+    #contact-form{
+        max-width: 1170px;
+    }
+
 }
 
