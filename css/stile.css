@@ -1,10 +1,15 @@
 /* ------GENERALE------ */
+@font-face {
+    font-family: FontTeam2;
+    src: url(../assets/fonts/ufonts.com_tw-cen-mt.ttf);
+}
+
 :root{
     --swiper-theme-color:#FF540B;
 }
 
 body{
-    font-family: 'Mulish', sans-serif; 
+    font-family: FontTeam2; 
 }
 
 .orange-txt{
@@ -292,13 +297,14 @@ h3 {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    /* position: relative; */
-    overflow: hidden;
+    
     padding: 1rem;
 }
 
-/* #sect-blog{
- animazione immagine
+/*ovviamente non va <-----------*/
+/* .blog-piatto:hover .blog-img{
+    transform: rotateZ(45deg);
+    transform: scale(1.8);
 } */
 
 #sect-blog h2{
@@ -309,7 +315,9 @@ h3 {
 
 
 /* !!!!!!!!!!!!AGGIUNTO DIV BLOG PLATES!!!!!!!!!!!!! */
+ /*ovviamente non va <-----------*/
 #blog-plates{
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -325,13 +333,13 @@ h3 {
     flex-direction: column;
     justify-content: center;
     margin-bottom: 1rem;
-    
-
 }
 
 .blog-img img{
    width: 100%;
    max-width: 440px;
+   height: 100%;
+    object-fit: cover;
 }
 
 .blog-txt{
@@ -347,19 +355,7 @@ h3 {
     position: relative;
 }
 
-.quadrato{
-    background-color: white;
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    left: -20px;
-    top: 30px;
-    transform: rotateZ(45deg);
-}
-/* FINIRE QUESTO */
-.blog-piatto[data-reverse]{
-    right: -20px;
-}
+
 
 .blog-txt p{
     color: #959595;
@@ -368,17 +364,18 @@ h3 {
 
 /*?????????? pulsante di merda non sta dove voglio io ???????????*/
 #sect-blog .button-container{
-    width: 270px;
+    width: 100vw;
     height: 80px;
     position: relative;
+    margin-bottom: 2rem;
+    bottom: -2rem;
 }
 #sect-blog #blog-btn{
     position: absolute;
-    left: 10px;
+    left: 5%;
     padding: 28px 85px;
     background-color: #ff530a;
     color: #fff;
-    float: left;
     text-decoration: none;
     font-weight: 500;
 }
@@ -387,8 +384,9 @@ h3 {
 /* cambiato padding */
 #sect-menu {
     background-color: white;
-    padding: 4rem 1rem;
-    display: inline;  
+    position: relative;
+    padding: 0 1rem 4rem 1rem;
+    display: inline;
 }
 .title-menu {
     text-align: center;
@@ -790,12 +788,6 @@ margin-bottom: 1rem;
     #container-menu {
         padding: 0;
     }
-    #container-menu {
-        padding: 0;
-    }
-    #sect-menu {
-        padding: 0;
-    }
 
     /* -----SECT BLOG----- */
 
@@ -804,6 +796,24 @@ margin-bottom: 1rem;
     }
     #blog-plates [data-reverse]{
         flex-direction: row-reverse;
+    }
+    .quadrato{
+        background-color: white;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        left: -20px;
+        top: 30px;
+        transform: rotateZ(45deg);
+    }
+    
+    .blog-piatto[data-reverse] .quadrato{
+        left: unset;
+        right: -20px;
+    }
+    #sect-blog #blog-btn{
+        left: 50%;
+        transform: translate(-50%);
     }
 
     /* ------SECT-SUBSCRIBE------ */
@@ -869,7 +879,7 @@ margin-bottom: 1rem;
         width: 880px;
     }
 
-
+    /* header nav area */
     #nav-area .menu {
         display: flex;
         justify-content: flex-end;
@@ -882,9 +892,6 @@ margin-bottom: 1rem;
     #nav-area .menu-icon {
         display: none;
     }
-    /* #nav-area li {
-        float: left;
-    } */
 
     #nav-area li a {
         padding: 1rem 0;
@@ -893,12 +900,24 @@ margin-bottom: 1rem;
 }
     
 
+    /* BLOG SECTION */
+    .blog-piatto{
+        width: 45%;
+    }
+    #blog-plates{
+        flex-direction: row;
+        flex-wrap: wrap;
+        transform: scale(1.1);
+    }
+    #sect-blog #blog-btn{
+        left: 75%;
+    }
+
 
 @media screen and (min-width: 1200px) {
     /* ------SECT-MENU------ */
     #container-menu {
         width: 100%;
-        padding: 0;
     }
     #container-menu * {
         max-width: 1140px;
