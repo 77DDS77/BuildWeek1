@@ -598,7 +598,7 @@ h3 {
 /* aggiunto margin 0 auto perche' c'e qualcosa che interferisce */
 #contact-form{
     width:100%;
-    max-width: 760px;
+    max-width: 720px;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
@@ -852,6 +852,26 @@ margin-bottom: 1rem;
         font-size: 2.4rem;
     }
 
+
+    /*-------SECT Contact US ----- */
+
+   #contact-us{
+    text-align: center;
+   }
+    
+    #contact-form{
+        max-width: 720px;
+    }
+
+    #contact-us button{
+        max-width:512px;
+        margin: 0 auto;
+       
+
+    }
+
+
+
 }
 @media screen and (min-width: 992px) {
     #sect-cuoco p .to-new-line {
@@ -882,9 +902,10 @@ margin-bottom: 1rem;
         padding: 1rem 0;
         width: auto;
     }
-
-
 }
+    
+
+
 @media screen and (min-width: 1200px) {
     /* ------SECT-MENU------ */
     #container-menu {
