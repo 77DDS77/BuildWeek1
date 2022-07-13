@@ -162,20 +162,22 @@ h3 {
 /* ///////////////FINE NAV BAR TEST AREA////////////////// */
 #head-content{
     /* max-width: 1080px; da giocarci con i mediaqueries */
-    width: 95%;
-    padding: 0 1rem;
+    width: 100%;
 }
 
 #featured-h3{
     padding-top: 2rem;
+    margin-left: 1rem;
 }
 
 /* ///////////////SLIDER TEST AREA////////////////// */
 .carusel{
+    width: 90%;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 1rem 0;
+    margin: 0 auto;
 }
 .carusel > .slide-container{
     width: 100%;
@@ -328,6 +330,7 @@ h3 {
     flex-direction: column;
     justify-content: center;
     margin-bottom: 1rem;
+    
 
 }
 
@@ -346,21 +349,43 @@ h3 {
     flex-direction: column;
     justify-content:center;
     align-items: center;
+    position: relative;
 }
+
+.quadrato{
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: -20px;
+    top: 30px;
+    transform: rotateZ(45deg);
+}
+/* FINIRE QUESTO */
+.blog-piatto[data-reverse]{
+    right: -20px;
+}
+
 .blog-txt p{
     color: #959595;
     font-size: 0.8rem;
 }
 
 /*?????????? pulsante di merda non sta dove voglio io ???????????*/
+#sect-blog .button-container{
+    width: 270px;
+    height: 80px;
+    position: relative;
+}
 #sect-blog #blog-btn{
+    position: absolute;
+    left: 10px;
     padding: 28px 85px;
     background-color: #ff530a;
     color: #fff;
     float: left;
     text-decoration: none;
     font-weight: 500;
-    
 }
 
 /* ------SECT-MENU------ */
@@ -786,6 +811,15 @@ margin-bottom: 1rem;
         font-weight: 500;
     }
 
+    /* -----SECT BLOG----- */
+
+    .blog-piatto{
+        flex-direction: row;
+    }
+    #blog-plates [data-reverse]{
+        flex-direction: row-reverse;
+    }
+
     /* ------SECT-SUBSCRIBE------ */
     #sect-subscribe {
         height: 54%;
@@ -825,18 +859,7 @@ margin-bottom: 1rem;
         width: 880px;
     }
 
-    #nav-area, #head-content{
-        max-width: 800px;
-    }
-    #container-menu * {
-        max-width: 940px;
-    }
-    .manu-itm {
-        width: 100%;
-    }
-    
 
-   
     #nav-area .menu {
         display: flex;
         justify-content: flex-end;
