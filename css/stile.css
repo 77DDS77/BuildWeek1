@@ -72,6 +72,7 @@ h3 {
 #nav-area.sticked{
     position: fixed;
     top: 0px;
+    width: 95%;
 }
 
 
@@ -301,11 +302,6 @@ h3 {
     padding: 1rem;
 }
 
-/*ovviamente non va <-----------*/
-/* .blog-piatto:hover .blog-img{
-    transform: rotateZ(45deg);
-    transform: scale(1.8);
-} */
 
 #sect-blog h2{
     text-align: center;
@@ -317,7 +313,6 @@ h3 {
 /* !!!!!!!!!!!!AGGIUNTO DIV BLOG PLATES!!!!!!!!!!!!! */
  /*ovviamente non va <-----------*/
 #blog-plates{
-    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -362,9 +357,27 @@ h3 {
     font-size: 0.8rem;
 }
 
-/*?????????? pulsante di merda non sta dove voglio io ???????????*/
+
+/* --------------------------------PROVA ANIMAZIONE IMMAGINE */
+
+.blog-img{
+    overflow: hidden;
+}
+
+.blog-piatto img{
+    transition: transform .5s ease-in-out;
+}
+
+.blog-piatto:hover img{
+    transform: scale(1.2) rotate(10deg);
+}
+
+/* ========================================================== */
+
+
+/*?????????? pulsante non sta dove voglio io ???????????*/
 #sect-blog .button-container{
-    
+    /* width: 100vw;  mi fuckuppa tutto il sito for whatever reason */
     height: 80px;
     position: relative;
     margin-bottom: 2rem;
@@ -378,6 +391,16 @@ h3 {
     color: #fff;
     text-decoration: none;
     font-weight: 500;
+}
+
+/* ================================ NOT UX FRIENDLY */
+#sect-blog #blog-btn:hover{
+    background-color: transparent;
+    border: 1px solid #ff530a;
+    color: #ff530a;
+    border-radius: 15px;
+    transition: border-radius, background-color .3s ease-in-out;
+    font-weight: 700;
 }
 
 /* ------SECT-MENU------ */
@@ -913,9 +936,7 @@ margin-bottom: 1rem;
         padding: 1rem 0;
         width: auto;
     }
-
     
-
     /* BLOG SECTION */
     .blog-piatto{
         width: 45%;
@@ -928,6 +949,7 @@ margin-bottom: 1rem;
     #sect-blog #blog-btn{
         left: 75%;
     }
+
 
       /*-------SECT Contact US 992px ----- */
 
