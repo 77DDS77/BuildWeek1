@@ -741,7 +741,7 @@ margin-bottom: 1rem;
     
 }
 @media screen and (min-width: 768px) {
-
+    /* ------SECT-MENU------ */
     .blocco {
         display: flex;
         justify-content: space-between;
@@ -847,6 +847,7 @@ margin-bottom: 1rem;
 
 }
 @media screen and (min-width: 1200px) {
+    /* ------SECT-MENU------ */
     #container-menu {
         width: 100%;
         padding: 0;
