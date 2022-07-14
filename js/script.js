@@ -1,3 +1,5 @@
+
+// IMG SLIDER
 var swiper = new Swiper(".slide-content", {
     // slidesPerView: 3,
     spaceBetween: 10,
@@ -31,6 +33,7 @@ var swiper = new Swiper(".slide-content", {
     },
 });
 
+//NAVBAR FAKE STICKY
 function plsStick(elemento){
     let getSticky = document.querySelector(elemento);
     let headerHeight = document.querySelector('#head-container').clientHeight;
@@ -43,6 +46,20 @@ function plsStick(elemento){
     }else if(document.body.scrollTop < correctHeight - 1){
         getSticky.classList.remove('sticked');
     }
-    console.log(getSticky)
-    console.log(document.body.scrollTop)
 }
+
+// FADE IN ANIMATION
+window.addEventListener('scroll',() =>{
+    let contenuto = document.querySelectorAll('.fade');
+    contenuto.forEach(function (pls) {
+        let posizioneContenuto = pls.getBoundingClientRect().top;
+        let posizioneSchermo = window.innerHeight;
+        if ((posizioneContenuto < posizioneSchermo)/3) {
+            pls.classList.add('active');
+        };
+    });
+});
+
+console.log('¸¸♬·¯·♩¸¸♪·¯·♫¸¸Never Gonna Give You Up¸¸♬·¯·♩¸¸♪·¯·♫¸¸')
+console.log('¸¸♬·¯·♩¸¸♪·¯·♫¸¸Never gonna let you down¸¸♬·¯·♩¸¸♪·¯·♫¸¸')
+console.log('·♩¸¸♪·¯·♫¸¸Never gonna run around and desert you¸¸♬·¯·♩¸¸♪·')
