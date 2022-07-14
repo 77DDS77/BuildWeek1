@@ -298,20 +298,37 @@ h3 {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    
+    position: relative;
     padding: 1rem;
 }
 
+#sect-blog:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(../assets/images/overlay-pattern.png) #000000;
+    opacity: 0.3;
+    left: 0;
+    top: 0;
+}
+
+#sect-blog #blog-title{
+    position: relative;
+}
 
 #sect-blog h2{
     text-align: center;
     margin-bottom: 2rem;
     padding: 2rem;
+    font-size: 1.5rem;
+    color: white;
 }
 
 
 /* !!!!!!!!!!!!AGGIUNTO DIV BLOG PLATES!!!!!!!!!!!!! */
- /*ovviamente non va <-----------*/
+
+
 #blog-plates{
     display: flex;
     flex-direction: column;
@@ -328,6 +345,21 @@ h3 {
     flex-direction: column;
     justify-content: center;
     margin-bottom: 1rem;
+    z-index: 1;
+
+}
+
+/* -----------------------------------------------------------QUA <------------------*/
+.fade{
+    opacity: 0;
+    transform: scale(0.1);  
+}
+
+.active{
+    opacity: 1;
+    transform: scale(1);
+    transform-origin: top;
+    transition: all 0.7s ease-in-out; 
 }
 
 .blog-img img{
@@ -393,7 +425,6 @@ h3 {
     font-weight: 500;
 }
 
-/* ================================ NOT UX FRIENDLY */
 #sect-blog #blog-btn:hover{
     background-color: transparent;
     border: 1px solid #ff530a;
