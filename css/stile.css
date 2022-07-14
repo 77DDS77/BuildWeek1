@@ -525,10 +525,9 @@ h3 {
     opacity: 0.3;
     left: 0;
     top: 0;
-    z-index: 1;
 }
 #sect-subscribe div {
-    z-index: 2;
+    z-index: 1;
 }
 #sect-subscribe p {
     padding: 25px 0;
@@ -572,10 +571,14 @@ h3 {
     background-color: #7EC3BB;
     width: 212px;
     border: none;
-    text-shadow: 0px 0px 3px white;
+    text-shadow: 0px 0px 2px white;
     font-weight: 700;
     letter-spacing: 2px;
     cursor: pointer;
+    transition: background-color 0.3s;
+}
+#news-btn:hover {
+    background-color: #669e98;
 }
 #news-btn-container {
     margin-top: 20px;
