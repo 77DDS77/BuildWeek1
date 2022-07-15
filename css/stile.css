@@ -70,6 +70,31 @@ h3 {
     z-index: 100;
 }
 
+
+.bordo {
+
+    height: 35px;
+    position: absolute;
+    z-index: 1010;
+    width: 100%;
+    top: 0;
+    pointer-events: none;
+    transition: .35s;
+    border-bottom: 2px solid #ff5333;
+    height: 90%;
+    
+}
+.left {
+    width: 0px;
+    opacity: 0;
+}
+li a {
+    overflow: hidden;
+    position: relative;
+}
+
+
+
 #nav-area.sticked {
     position: fixed;
     top: 0px;
@@ -645,8 +670,11 @@ h3 {
     font-weight: 700;
     letter-spacing: 2px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
-
+#news-btn:hover {
+    background-color: #639b94;
+}
 #news-btn-container {
     margin-top: 20px;
     text-align: left;

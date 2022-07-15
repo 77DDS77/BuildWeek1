@@ -63,3 +63,19 @@ window.addEventListener('scroll',() =>{
 console.log('¸¸♬·¯·♩¸¸♪·¯·♫¸¸Never Gonna Give You Up¸¸♬·¯·♩¸¸♪·¯·♫¸¸')
 console.log('¸¸♬·¯·♩¸¸♪·¯·♫¸¸Never gonna let you down¸¸♬·¯·♩¸¸♪·¯·♫¸¸')
 console.log('·♩¸¸♪·¯·♫¸¸Never gonna run around and desert you¸¸♬·¯·♩¸¸♪·')
+
+
+
+
+let animato = document.querySelectorAll('li');
+let bordo = document.querySelectorAll(".bordo")
+
+for(let i = 0; i < animato.length; i++) {
+    console.log("dsfs")
+    animato[i].addEventListener('mouseover', function(e) {
+        bordo[i].classList.remove("left")
+    })
+    animato[i].addEventListener('mouseout', function(e) {
+        bordo[i].classList.add("left")
+    })
+}
