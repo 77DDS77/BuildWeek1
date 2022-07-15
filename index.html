@@ -102,17 +102,18 @@
 
 
     <!-- section blocchi piatti -->
-    <!-- section back img da mettere su css pos fixed -->
+    
     <section id="sect-blog">
-        <!--!!! mettere div quadrato ruotato 45 gradi !!!-->
-        <h2>Latest <span class="orange-txt txt-big">From</span> the <span class="orange-txt txt-big">Blog</span></h2>
-
+        <div id="blog-title">
+            <h2>Latest <span class="orange-txt txt-big">From</span> the <span class="orange-txt txt-big">Blog</span></h2>
+        </div>
         <div id="blog-plates">
-            <div class="blog-piatto">
+
+            <!-- blocco piatto +  testo 1-->
+            <div class="blog-piatto fade">
                 <div class="blog-img">
                     <img src="./assets/images/blog/blog-img-1.jpg" alt="#">
                 </div>
-
                 <div class="blog-txt">
                     <div class="quadrato"></div>
                     <h3>Homestyle Chicken pot Pie</h3>
@@ -124,7 +125,7 @@
             </div>
 
             <!-- blocco piatto +  testo 2-->
-            <div class="blog-piatto">
+            <div class="blog-piatto fade">
                 <div class="blog-img">
                     <img src="./assets/images/blog/blog-img-2.jpg" alt="#">
                 </div>
@@ -139,7 +140,7 @@
             </div>
 
             <!-- blocco piatto +  testo 3-->
-            <div class="blog-piatto" data-reverse>
+            <div class="blog-piatto fade" data-reverse>
                 <div class="blog-img">
                     <img src="./assets/images/blog/blog-img-3.jpg" alt="#">
                 </div>
@@ -154,7 +155,7 @@
             </div>
 
             <!-- blocco piatto +  testo 4-->
-            <div class="blog-piatto" data-reverse>
+            <div class="blog-piatto fade" data-reverse>
                 <div class="blog-img">
                     <img src="./assets/images/blog/blog-img-4.jpg" alt="#">
                 </div>
@@ -169,7 +170,7 @@
             </div>
 
             <!-- blocco piatto +  testo 5-->
-            <div class="blog-piatto">
+            <div class="blog-piatto fade">
                 <div class="blog-img">
                     <img src="./assets/images/blog/blog-img-5.jpg" alt="#">
                 </div>
@@ -184,7 +185,7 @@
             </div>
 
             <!-- blocco piatto +  testo 6-->
-            <div class="blog-piatto">
+            <div class="blog-piatto fade">
                 <div class="blog-img">
                     <img src="./assets/images/blog/blog-img-6.jpg" alt="#">
                 </div>
@@ -200,7 +201,7 @@
         </div>
 
         <!-- mettere dentro div realtive e A absolute -->
-        <div class="button-container">
+        <div class="button-container fade">
             <a href="#" id="blog-btn">MORE INFO</a>
         </div>
     </section>
@@ -221,7 +222,7 @@
             <h3>FEATURED <span class="orange-txt"> OF THE WEEK</span></h3>
 
             <!-- blocco menu item 1 -->
-            <div class="manu-itm">
+            <div class="manu-itm fade">
                 <div class="blocco">
                     <h3>Pancakes n' Such</h3>
                     <div class="border-dotted"></div>
@@ -236,7 +237,7 @@
 
 
             <!-- blocco menu item 2 -->
-            <div class="manu-itm">
+            <div class="manu-itm fade">
                 <div class="blocco">
                     <h3>Homestyle Chicken Pot Pie</h3>
                     <div class="border-dotted"></div>
@@ -249,7 +250,7 @@
             </div>
 
             <!-- blocco menu item 3 -->
-            <div class="manu-itm">
+            <div class="manu-itm fade">
                 <div class="blocco">
                     <h3>Cereal, Panecillos y Frutas</h3>
                     <div class="border-dotted"></div>
@@ -262,7 +263,7 @@
             </div>
 
             <!-- blocco menu item 4 -->
-            <div class="manu-itm">
+            <div class="manu-itm fade">
                 <div class="blocco">
                     <h3>Meat of Skewers</h3>
                     <div class="border-dotted"></div>
@@ -275,19 +276,20 @@
             </div>
 
 
+           
+    
+                <!-- blocco menu item 5 -->
+                <div class="manu-itm fade">
+                    <div class="blocco">
+                        <h3>Steak with a Garlic and Parsley Risotto</h3>
+                        <div class="border-dotted"></div>
+                        <span>$ 75.00</span>
+                    </div>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim&&                </p>
+                       <!-- blocco menu item 6 -->
+                <div id="menu-ultimo" class="manu-itm fade">
 
-            <!-- blocco menu item 5 -->
-            <div class="manu-itm">
-                <div class="blocco">
-                    <h3>Steak with a Garlic and Parsley Risotto</h3>
-                    <div class="border-dotted"></div>
-                    <span>$ 75.00</span>
-                </div>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim&& </p>
-                <!-- blocco menu item 6 -->
-                <div id="menu-ultimo" class="manu-itm">
 
                     <div class="blocco">
                         <h3>Ceaser Salad</h3>
@@ -299,8 +301,10 @@
                         labore et dolore magna aliqua. Ut enim ad minim&& </p>
                 </div>
 
-            </div>
-            <a href="#" id="menu-btn">MORE INFO</a>
+
+                </div>
+                <a href="#" id="menu-btn" class="fade">MORE INFO</a>
+
 
     </section>
 
