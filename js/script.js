@@ -54,10 +54,13 @@ window.addEventListener('scroll',() =>{
     contenuto.forEach(function (pls) {
         let posizioneContenuto = pls.getBoundingClientRect().top;
         let posizioneSchermo = window.innerHeight;
-        if ((posizioneContenuto < posizioneSchermo)/3) {
+        if ((posizioneContenuto < posizioneSchermo/0.9)) {
             pls.classList.add('active');
         };
+        console.log(posizioneContenuto)
+        console.log(posizioneSchermo)
     });
+    
 });
 
 console.log('¸¸♬·¯·♩¸¸♪·¯·♫¸¸Never Gonna Give You Up¸¸♬·¯·♩¸¸♪·¯·♫¸¸')
