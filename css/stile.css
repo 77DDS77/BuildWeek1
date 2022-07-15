@@ -8,6 +8,9 @@
     --swiper-theme-color: #FF540B;
 }
 
+html {
+    scroll-behavior: smooth;
+}
 body {
     font-family: FontTeam2;
 }
@@ -71,26 +74,23 @@ h3 {
 }
 
 
-.bordo {
 
-    height: 35px;
-    position: absolute;
-    z-index: 1010;
+.cool::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #ff5333;
+    transition: width .3s;
+}
+
+.cool:hover::after {
     width: 100%;
-    top: 0;
-    pointer-events: none;
-    transition: .35s;
-    border-bottom: 2px solid #ff5333;
-    height: 90%;
-    
+    transition: width .3s;
 }
-.left {
-    width: 0px;
-    opacity: 0;
-}
-li a {
-    overflow: hidden;
-    position: relative;
+.cool:focus {
+    width: 100%;
+    transition: width .3s;
 }
 
 
@@ -117,9 +117,7 @@ li a {
     margin: 0 15px;
 }
 
-#nav-area ul a:focus {
-    border-bottom: 2px solid #FF540B;
-}
+
 
 
 #nav-area #logo {
