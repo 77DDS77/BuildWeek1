@@ -172,13 +172,14 @@ h3 {
 
 /* ///////////////FINE NAV BAR TEST AREA////////////////// */
 #head-content {
-    /* max-width: 1080px; da giocarci con i mediaqueries */
     width: 100%;
 }
 
 #featured-h3 {
-    padding-top: 2rem;
-    margin-left: 1rem;
+    padding: 1rem;
+    position: relative;
+    float: left;
+    left: 5%;
 }
 
 /* ///////////////SLIDER TEST AREA////////////////// */
@@ -393,6 +394,22 @@ h3 {
     object-fit: cover;
 }
 
+/* --------------------------------PROVA ANIMAZIONE IMMAGINE */
+
+.blog-img{
+    overflow: hidden;
+}
+
+.blog-piatto img{
+    transition: transform .5s ease-in-out;
+}
+
+.blog-piatto:hover img{
+    transform: scale(1.2) rotate(10deg);
+}
+
+/* ========================================================== */
+
 .blog-txt {
     box-sizing: border-box;
     max-width: 440px;
@@ -413,7 +430,7 @@ h3 {
     font-size: 0.8rem;
 }
 
-/*?????????? pulsante di merda non sta dove voglio io ???????????*/
+
 #sect-blog .button-container {
 
     height: 80px;
@@ -509,7 +526,7 @@ h3 {
     z-index: 1;
     background-color: white;
     height: 21px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 #container-menu>h3 {
@@ -1123,7 +1140,22 @@ h3 {
 
 
 @media screen and (min-width: 1200px) {
+    .txt-big{
+        font-size: 4rem;
+    }
+    /* ------- H & Ps ------- */
+    #sect-cuoco h2, #container-menu h2, #subscribe-heading h2{
+        font-size: 3rem;
+    }
 
+    #sect-cuoco p, #subscribe-heading p{
+        font-size: 1.2rem;
+    }
+    #contact-form h4{
+        font-size: 1.5rem;
+    }
+
+/* ----------------------- */
     /* ------SECT-MENU------ */
     #container-menu {
         width: 100%;
@@ -1131,6 +1163,17 @@ h3 {
 
     #container-menu * {
         max-width: 1140px;
+    }
+
+    #container-menu .manu-itm{
+        width: 100%;
+    }
+
+    #container-menu .manu-itm p{
+        font-size: 1.1rem;
+    }
+    #container-menu .manu-itm h3{
+        font-size: 1.5rem;
     }
 
     #container-menu .title-menu p {
@@ -1167,8 +1210,6 @@ h3 {
         width: 33%;
         padding: 0 1rem;
     }
-
-    
 
 
 
