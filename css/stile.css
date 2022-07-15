@@ -8,6 +8,9 @@
     --swiper-theme-color: #FF540B;
 }
 
+html {
+    scroll-behavior: smooth;
+}
 body {
     font-family: FontTeam2;
 }
@@ -70,6 +73,28 @@ h3 {
     z-index: 100;
 }
 
+
+
+.cool::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #ff5333;
+    transition: width .3s;
+}
+
+.cool:hover::after {
+    width: 100%;
+    transition: width .3s;
+}
+.cool:focus {
+    width: 100%;
+    transition: width .3s;
+}
+
+
+
 #nav-area.sticked {
     position: fixed;
     top: 0px;
@@ -92,9 +117,7 @@ h3 {
     margin: 0 15px;
 }
 
-#nav-area ul a:focus {
-    border-bottom: 2px solid #FF540B;
-}
+
 
 
 #nav-area #logo {
@@ -665,8 +688,11 @@ h3 {
     font-weight: 700;
     letter-spacing: 2px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
-
+#news-btn:hover {
+    background-color: #639b94;
+}
 #news-btn-container {
     margin-top: 20px;
     text-align: left;
