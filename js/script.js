@@ -68,14 +68,20 @@ console.log('¸¸♬·¯·♩¸¸♪·¯·♫¸¸Never gonna let you down¸¸♬
 console.log('·♩¸¸♪·¯·♫¸¸Never gonna run around and desert you¸¸♬·¯·♩¸¸♪·')
 
 
-window.addEventListener("click", () => {
-    let bordo = document.querySelectorAll(".cool")
-    bordo.forEach(function (e) {
-        e.classList.add(e + "::after")
-        console.log(e)
-    })
 
+let bordo = document.querySelectorAll("li a")
+bordo.forEach(function(li){
+    
+    li.addEventListener("click", function(e){
+        e.stopPropagation();
+        bordo.forEach(function(el){
+            el.classList.remove("bordo")
+        })
+        e.target.classList.add("bordo");
+    })
 })
+
+
 /*
 let animato = document.querySelectorAll('li');
 let newbordo = document.querySelectorAll(".new-bordo")
