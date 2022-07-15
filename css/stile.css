@@ -516,17 +516,15 @@ h3 {
     margin-bottom: 4rem;
 }
 
-.manu-itm>h3 {
+.menu-itm>h3 {
     margin-bottom: 1rem;
-
 }
 
-.manu-itm span {
+.menu-itm span {
     color: #938463;
     font-size: 0.8rem;
 }
-
-.manu-itm p {
+.menu-itm p {
     margin-bottom: 3rem;
     color: #949494;
     font-size: 0.75rem;
@@ -551,6 +549,11 @@ h3 {
     text-align: center;
     padding-top: 2rem;
     color: #FF540B;
+}
+#menu-btn:hover {
+    background-color: #FF4F02;
+    color: white;
+    transition-duration: 0.5s;
 }
 
 
@@ -979,7 +982,13 @@ h3 {
     .txt-big {
         font-size: 2.4rem;
     }
-
+    
+    /*-------SECT-MENU------*/
+    #menu-btn {
+        position: relative;
+        left: 13.4rem;
+    }
+    
     /* ------CONTACT-US------ */
     #contact-us h3 {
         font-size: 1.85rem;
